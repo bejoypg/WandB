@@ -3,7 +3,8 @@
 This README documents the steps followed to bring up the WandB platform in Azure infrastructure.
 
 ## Summary of changes
-- Added/updated environment defaults in `terraform.tfvars`:
+
+## Create `terraform.tf` in repo root and added environment defaults:
   - namespace = `bejoyp`
   - location = `westeurope`
   - node_pool_zones = `["3"]`
@@ -15,7 +16,7 @@ This README documents the steps followed to bring up the WandB platform in Azure
     - kubernetes_max_node_per_az = `6`
   - other flags: `use_internal_queue = "true"`, `ssl = "false"`, `deletion_protection = false`
 
-## Create providers.tf in repo root and wire providers to AKS outputs:
+## Create `providers.tf` in repo root and wire providers to AKS outputs:
 
 ```hcl
 terraform {
