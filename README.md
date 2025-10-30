@@ -1,4 +1,4 @@
-# terraform-azurerm-wandb
+# WandB Platform Deployment
 
 This README documents the steps followed to bring up the WandB platform in Azure infrastructure.
 
