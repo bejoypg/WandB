@@ -17,6 +17,7 @@ This README documents the steps followed to bring up the WandB platform in Azure
 
 ## Create providers.tf in repo root and wire providers to AKS outputs:
 
+```hcl
 terraform {
   required_providers {
     azurerm     = { source = "hashicorp/azurerm" }
@@ -44,14 +45,17 @@ provider "helm" {
     load_config_file       = false
   }
 }
+```
 
 ## Bring up the cluster and WandB platform by below.
 1. Authenticate:
    - az login
    - Provisioned quotas required as required for the deployment.
 2. Initialize & plan:
-```powershell
+
+```bash
 terraform init
 terraform plan -out plan.tfplan
 terraform show -json plan.tfplan > plan.json
 terraform apply
+```
